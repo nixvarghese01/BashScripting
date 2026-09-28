@@ -12,11 +12,12 @@ add(){ echo Sum is $(($1 + $2));}
 
 print_it LogicOps
 print_it Lab
+status=$?
 
-echo The previous function has a return value of $?
+echo "The previous function has a return value of $status"
 
 # Can't operate on exit status code
-sum=$((5 + $?))
+sum=$((5 + status))
 echo "Adding 5 in returned value will give us" $sum
 
 #Calling add function
